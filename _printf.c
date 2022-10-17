@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	va_start (args, format);
+	va_start(args, format);
 
 	while (format[i])
 	{
@@ -63,6 +63,14 @@ int (*get_fun(const char *format))(va_list)
 	convert_f get_f[] = {
 		{"c", print_char},
 		{"s", print_string},
+		{"i", print_i},
+		{"d", print_d};
+		{"u", print_u};
+		{"o", print_o};
+		{"x", print_x};
+		{"X", print_X};
+		{"p", print_addr};
+		{"r", print_unk};
 		{NULL, NULL}
 	};
 
