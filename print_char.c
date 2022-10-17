@@ -18,7 +18,7 @@ int print_char(va_list c)
  * print_perc - %
  * Return: 1 on success
  */
-int print_porcentage(void)
+int print_perc(void)
 {
 	_putchar('%');
 	return (1);
