@@ -15,14 +15,9 @@ int print_string(va_list s);
 int print_perc(void);
 int print_d(va_list d);
 int print_hex(unsigned int n, unsigned int c);
-int print_x(va_list x);
-int print_X(va_list X);
 int print_i(va_list i);
 int print_o(va_list o);
 int print_u(va_list u);
-
-int print_addr(va_list addr);
-int print_unk(va_list unk);
 
 typedef struct convert_format
 {

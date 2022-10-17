@@ -36,7 +36,7 @@ int print_hex(unsigned int n, unsigned int c)
 			if (d < 10)
 				_putchar(d + '0');
 			else
-				_putchar(d + '0' + diff);
+				_putchar(d + '0' + difference);
 			count++;
 			n = n - (d * bt);
 			bt = bt / 16;
