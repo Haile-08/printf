@@ -8,7 +8,7 @@
  */
 int print_char(va_list c)
 {
-	unsigned char my_c;
+	char my_c;
 
 	my_c = va_arg(c, int);
 	_putchar(my_c);
