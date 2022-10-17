@@ -13,3 +13,5 @@ C - printf
 #
 
 ## RESOURCE LINKS
+# https://www.ibm.com/docs/en/i/7.2?topic=functions-printf-print-formatted-characters
+# https://stackoverflow.com/questions/1735236/how-to-write-my-own-printf-in-c
