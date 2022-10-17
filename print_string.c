@@ -19,5 +19,5 @@ int print_string(va_list s)
 		_putchar(string[i]);
 		i++;
 	}
-	return(i);
+	return (i);
 }

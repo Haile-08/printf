@@ -31,7 +31,6 @@ int _printf(const char *format, ...)
 			return (len);
 
 		f = get_fun(&format[i + 1]);
-		
 		if (f != NULL)
 		{
 			len = len + f(args);
