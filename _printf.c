@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include "main.h"
 
+int (*get_fun(const char *format))(va_list);
 /**
  * _printf - prints formatted output
  * @format: format - c, s, %
@@ -11,13 +12,13 @@
 int _printf(const char *format, ...)
 {
 	unsigned int i = 0, len = 0;
-	va_list args;
+	va_list ap;
 	int (*f)(va_list);
 
 	if (format == NULL)
 		return (-1);
 
-	va_start(args, format);
+	va_start(ap, format);
 
 	while (format[i])
 	{
@@ -29,16 +30,17 @@ int _printf(const char *format, ...)
 		}
 		if (format[i] == '\0')
 			return (len);
-
 		f = get_fun(&format[i + 1]);
+
 		if (f != NULL)
 		{
-			len = len + f(args);
+			len = len + f(ap);
 			i = i + 2;
 			continue;
 		}
 		if (!format[i + 1])
 			return (-1);
+
 		_putchar(format[i]);
 		len++;
 
@@ -47,7 +49,7 @@ int _printf(const char *format, ...)
 		else
 			i++;
 	}
-	va_end(args);
+	va_end(ap);
 	return (len);
 }
 /**
@@ -59,7 +61,7 @@ int (*get_fun(const char *format))(va_list)
 {
 	unsigned int i;
 
-	convert_f get_f[] = {
+	code_f get_f[] = {
 		{"c", print_char},
 		{"s", print_string},
 		{NULL, NULL}

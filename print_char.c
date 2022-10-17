@@ -6,10 +6,10 @@
  */
 int print_char(va_list c)
 {
-	char my_c;
+	unsigned char my_c;
 
 	my_c = va_arg(c, int);
-	_putchar(my_c);
+	write(1, &my_c, 1);
 	return (1);
 }
 /**
