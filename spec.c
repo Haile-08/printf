@@ -17,6 +17,10 @@ int spec(int *i, const char *format, va_list ap)
 		{"d", print_decimal},
 		{"i", print_decimal},
 		{"b", print_binary},
+		{"u", print_u},
+		{"o", print_o},
+		{"x", print_x},
+		{"X", print_Xu},
 		{NULL, NULL},
 	};
 	int size = sizeof(spc) / sizeof(mark_t) - 1;
