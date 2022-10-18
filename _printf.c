@@ -9,14 +9,14 @@ int _printf(const char *format, ...)
 {
 	va_list ap;
 	int i = 0, len = 0;
-	
+
 	va_start(ap, format);
 
 	if ((!format) || (format[0] == '%' && !format[1]))
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
-	
+
 	for (; (format && format[i]); i++)
 	if (format[i] == '%')
 		len += spec(&i, format, ap);

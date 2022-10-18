@@ -3,7 +3,7 @@
  * spec - matches fmt specifier with prototype(fn)
  * @i: element
  * @format: string from printf
- * @list: list of args
+ * @ap: list of args
  * Return: output length to stdout
  */
 int spec(int *i, const char *format, va_list ap)
