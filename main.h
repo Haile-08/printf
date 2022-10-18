@@ -1,31 +1,58 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 
+#define BUFFER_SIZE 1024
+
 #include <stdio.h>
 #include <unistd.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <float.h>
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int print_char(va_list c);
-int print_string(va_list s);
-int print_perc(void);
-int print_d(va_list d);
-int print_hex(unsigned int n, unsigned int c);
-int print_x(va_list x);
-int print_X(va_list X);
-int print_i(va_list i);
-int print_o(va_list o);
-int print_u(va_list u);
+int spec(int *i, const char *format, va_list ap);
 
+int print_char(va_list p);
+int print_string(va_list p);
+int print_pct(va_list __attribute__((unused)) p);
+int print_deci(va_list p);
+int print_int(va_list p);
+int print_bin(va_list p);
+int print_uint(va_list p);
+int print_oct(va_list p);
+int print_x(va_list p);
+int print_Xu(va_list p);
+int print_Su(va_list p);
+int print_pt(va_list p);
+int print_r(va_list p);
+int print_Rt(va_list __attribute__((unused)) p);
 
-typedef struct convert_format
+int aux_S_hex(int n);
+
+/**
+ * struct mark - struct for format
+ * @sc: 1st member
+ * @f: 2nd member
+ */
+typedef struct mark
 {
 	char *sc;
-	int (*f)(va_list);
-} code_f;
+	int (*f)(va_list p);
+} mark_t;
 
+/**
+ * struct nc - non custom specifier(flag)
+ * @sum: '+'
+ * @empty: ' '
+ * @hash: '#'
+ */
+typedef struct nc
+{
+	int sum;
+	int empty;
+	int hash;
+} nc_t;
 
 #endif /* _MAIN_H_ */

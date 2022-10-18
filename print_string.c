@@ -1,22 +1,24 @@
 #include "main.h"
-#include <stdio.h>
-#include <stdlib.h>
 /**
  * print_string - writes c to standard output
- * @s: string
+ * @p: argument pointer
  * Return: 1
  */
-int print_string(va_list s)
+int print_string(va_list p)
 {
-	char *my_string;
+	char *my_str;
 	int i = 0;
 
-	my_string = va_arg(s, char *);
-	if (my_string == NULL)
-		my_string = "(null)";
-	while (my_string[i])
+	my_str = va_arg(p, char*);
+
+	if (my_str == NULL)
 	{
-		_putchar(my_string[i]);
+		my_str = "(null)";
+	}
+
+	while (my_str[i] != '\0')
+	{
+		_putchar(my_str[i]);
 		i++;
 	}
 	return (i);
