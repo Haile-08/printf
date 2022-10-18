@@ -48,10 +48,11 @@ int print_decimal(va_list p);
 int print_int(va_list p);
 int print_binary(va_list p);
 
-int print_uint(va_list p);
-int print_oct(va_list p);
+int print_u(va_list p);
+int print_o(va_list p);
 int print_x(va_list p);
 int print_Xu(va_list p);
+
 int print_Su(va_list p);
 int print_pt(va_list p);
 int print_r(va_list p);
