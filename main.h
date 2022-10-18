@@ -1,5 +1,5 @@
-#ifndef _MAIN_H_
-#define _MAIN_H_
+#ifndef _PRINTF_H_
+#define _PRINTF_H_
 
 #define BUFFER_SIZE 1024
 
@@ -27,6 +27,20 @@ int _printf(const char *format, ...);
 int _putchar(char c);
 int spec(int *i, const char *format, va_list ap);
 
+
+/**
+ * struct nc - non custom specifier(flag)
+ * @sum: '+'
+ * @empty: ' '
+ * @hash: '#'
+ */
+typedef struct nc
+{
+	int sum;
+	int empty;
+	int hash;
+} nc_t;
+
 int print_char(va_list p);
 int print_string(va_list p);
 int print_pct(va_list __attribute__((unused)) p);
@@ -44,20 +58,5 @@ int print_r(va_list p);
 int print_Rt(va_list __attribute__((unused)) p);
 
 int aux_S_hex(int n);
-
-
-
-/**
- * struct nc - non custom specifier(flag)
- * @sum: '+'
- * @empty: ' '
- * @hash: '#'
- */
-typedef struct nc
-{
-	int sum;
-	int empty;
-	int hash;
-} nc_t;
 
 #endif /* _MAIN_H_ */
