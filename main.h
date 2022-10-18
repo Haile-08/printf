@@ -17,8 +17,10 @@ int spec(int *i, const char *format, va_list ap);
 int print_char(va_list p);
 int print_string(va_list p);
 int print_pct(va_list __attribute__((unused)) p);
-int print_deci(va_list p);
+int print_decimal(va_list p);
+
 int print_int(va_list p);
+
 int print_bin(va_list p);
 int print_uint(va_list p);
 int print_oct(va_list p);
