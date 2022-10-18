@@ -10,6 +10,7 @@ int print_Rot(va_list p)
 	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char b[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char *s = va_arg(p, char*);
+	
 	if (!s)
 	{
 		s = "(null)";
