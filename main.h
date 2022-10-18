@@ -52,6 +52,7 @@ int print_u(va_list p);
 int print_o(va_list p);
 int print_x(va_list p);
 int print_Xu(va_list p);
+int print_p(va_list p);
 
 int print_S(va_list p);
 int auxS_hex(int n);
