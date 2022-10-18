@@ -53,11 +53,5 @@ int print_o(va_list p);
 int print_x(va_list p);
 int print_Xu(va_list p);
 
-int print_Su(va_list p);
-int print_pt(va_list p);
-int print_r(va_list p);
-int print_Rt(va_list __attribute__((unused)) p);
-
-int aux_S_hex(int n);
 
 #endif /* _MAIN_H_ */
