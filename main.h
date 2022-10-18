@@ -54,7 +54,7 @@ int print_Xu(va_list p);
 int print_S(va_list p);
 int auxS_hex(int n);
 int print_reverse(va_list p);
-int print_Rot(va_list p);
+int print_Rot(va_list __attribute__((unused)) p);
 
 int print_p(va_list p);
 #endif /* _MAIN_H_ */
