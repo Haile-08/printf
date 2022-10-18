@@ -24,6 +24,7 @@ int spec(int *i, const char *format, va_list ap)
 		{"S", print_S},
 		{"R", print_Rot},
 		{"r", print_reverse},
+		{"p", print_p},
 		{NULL, NULL},
 	};
 	int size = sizeof(spc) / sizeof(mark_t) - 1;
