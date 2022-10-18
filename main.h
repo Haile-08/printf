@@ -10,6 +10,19 @@
 #include <limits.h>
 #include <float.h>
 
+
+/**
+ * struct mark - struct for format
+ * @sc: 1st member
+ * @f: 2nd member
+ */
+typedef struct mark
+{
+	char *sc;
+	int (*f)(va_list p);
+} mark_t;
+
+
 int _printf(const char *format, ...);
 int _putchar(char c);
 int spec(int *i, const char *format, va_list ap);
@@ -32,16 +45,7 @@ int print_Rt(va_list __attribute__((unused)) p);
 
 int aux_S_hex(int n);
 
-/**
- * struct mark - struct for format
- * @sc: 1st member
- * @f: 2nd member
- */
-typedef struct mark
-{
-	char *sc;
-	int (*f)(va_list p);
-} mark_t;
+
 
 /**
  * struct nc - non custom specifier(flag)
