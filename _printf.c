@@ -11,6 +11,7 @@ int _printf(const char *format, ...)
 	int i = 0, len = 0;
 
 	va_start(ap, format);
+
 	if ((!format) || (format[0] == '%' && !format[1]))
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
